@@ -79,7 +79,7 @@ impl Highlighter for REPLHelper {
 
     // Takes the hint and returns the highlighted version (with ANSI color).
     fn highlight_hint<'h>(&self, hint: &'h str) -> Cow<'h, str> {
-        Owned("\x1b[1m}".to_owned() + hint + "\x1b[m")
+        Owned("\x1b[1m`".to_owned() + hint + "\x1b[m")
     }
 
     // Tell if line needs to be highlighted when a specific char is typed or when cursor is moved under a specific char
